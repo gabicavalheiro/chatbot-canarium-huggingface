@@ -1,0 +1,16 @@
+# Ambiente virtual
+venv/
+
+# Modelo treinado (pesado demais pro GitHub — regenerado com finetune.py)
+modelo-chatbot/
+
+# Cache de Python
+__pycache__/
+*.pyc
+
+# Cache do Hugging Face (se ficar na pasta do projeto por engano)
+.cache/
+
+# Arquivos do sistema/editor
+.DS_Store
+.vscode/
