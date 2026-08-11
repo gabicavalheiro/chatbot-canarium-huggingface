@@ -1,20 +1,19 @@
 """
 app.py — Playground Streamlit para testar o chatbot de perguntas e respostas.
-
 Uso:
     streamlit run app.py
 """
-
 import streamlit as st
 import torch
 from transformers import GPT2LMHeadModel, GPT2TokenizerFast
 
 st.set_page_config(page_title="Chatbot PT-BR", page_icon="🤖")
 
-# Pasta gerada pelo finetune.py. Se você ainda não rodou o fine-tuning,
-# pode trocar temporariamente por "pierreguillou/gpt2-small-portuguese"
-# só para testar a interface (as respostas não farão sentido ainda).
-MODEL_DIR = "modelo-chatbot"
+# Modelo publicado no Hugging Face Hub (ver publicar_modelo.py).
+# Isso é necessário porque o deploy no Streamlit Cloud não tem acesso
+# à pasta local "modelo-chatbot" gerada pelo finetune.py — ela não vai
+# pro GitHub por ser pesada demais.
+MODEL_DIR = "gabifcavalheiro/chatbot-canarim-ptbr"
 
 
 @st.cache_resource
@@ -71,7 +70,6 @@ if st.button("Perguntar"):
             texto_gerado = tokenizer.decode(saida[0], skip_special_tokens=True)
             # Extrai só a parte gerada depois de "Resposta:"
             resposta = texto_gerado.split("Resposta:", 1)[-1].strip()
-
         st.markdown("### Resposta:")
         st.write(resposta)
 

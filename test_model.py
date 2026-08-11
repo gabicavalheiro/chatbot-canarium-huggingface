@@ -1,7 +1,7 @@
 """
 Script de teste rápido para gerar respostas do modelo fine-tunado
 e documentar exemplos para o relatório/vídeo do Tech Challenge.
-
+ 
 Como usar:
 1. Coloque este arquivo na pasta do seu projeto (pos-ml-4)
 2. Ajuste MODEL_PATH abaixo se o nome da pasta do modelo salvo for diferente
@@ -9,14 +9,13 @@ Como usar:
 4. Rode: python test_model.py
 5. Copie a saída do terminal e me envie de volta
 """
+ 
 
 from transformers import AutoTokenizer, AutoModelForCausalLM
 import torch
 
-# ── Ajuste aqui se necessário ────────────────────────────────
-MODEL_PATH = "./modelo-chatbot"  # pasta onde o finetune.py salvou o modelo
+MODEL_PATH = "./modelo-chatbot"  
 
-# Parâmetros de geração — sinta-se livre para editar e testar variações
 GEN_PARAMS = {
     "max_new_tokens": 120,
     "temperature": 0.7,
@@ -25,7 +24,6 @@ GEN_PARAMS = {
     "do_sample": True,
 }
 
-# Perguntas de teste — cobrindo categorias diferentes
 PERGUNTAS = [
     "Descreva os efeitos do aquecimento global.",
     "Escreva um poema curto sobre o outono.",
@@ -70,7 +68,7 @@ def main():
 
     print("\n" + "=" * 70)
     print("Copie tudo acima (desde PARÂMETROS até o último exemplo)")
-    print("e cole de volta na conversa com o Claude.")
+    print("e revise os resultados abaixo.")
     print("=" * 70)
 
 

@@ -1,13 +1,13 @@
 """
-teste_temperature.py — Gera a mesma pergunta com temperatures diferentes,
+test_temperature.py — Gera a mesma pergunta com temperatures diferentes,
 pra demonstrar na prática o efeito desse parâmetro (complemento rápido
 à avaliação qualitativa já feita).
-
+ 
 Como usar:
 1. Coloque este arquivo na pasta do seu projeto (pos-ml-4)
 2. Ative o venv: venv\\Scripts\\activate
-3. Rode: python teste_temperature.py
-4. Cole a saída de volta na conversa com o Claude
+3. Rode: python test_temperature.py
+4. Revise a saída no terminal
 """
 
 from transformers import AutoTokenizer, AutoModelForCausalLM
@@ -47,7 +47,7 @@ def main():
         print(f"Resposta: {resposta}")
 
     print("\n" + "=" * 70)
-    print("Copie tudo acima e cole de volta na conversa com o Claude.")
+    print("Copie tudo acima para registrar o resultado do teste.")
 
 
 if __name__ == "__main__":
