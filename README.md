@@ -101,5 +101,6 @@ Como o modelo é carregado diretamente do Hugging Face Hub (e não de uma pasta 
 ## Entrega
 
 - **Repositório GitHub:** https://github.com/gabicavalheiro/chatbot-canarium-huggingface
-- **App publicado (Streamlit):** _(adicionar link após o deploy)_
-- **Vídeo (mín. 5 min):** _(adicionar link após a gravação)_
+- **Repositório Hugging Face:** https://huggingface.co/gabifcavalheiro/chatbot-canarim-ptbr
+- **App publicado (Streamlit):** https://chatbot-canarium-huggingface-dfrpfzkg2gf7yocox5vjz3.streamlit.app/
+- **Vídeo (mín. 5 min):** https://drive.google.com/file/d/1v0oA5xky2RbPGgholL90auO4kyqwufeY/view?usp=sharing
